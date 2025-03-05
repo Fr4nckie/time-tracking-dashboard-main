@@ -4,24 +4,22 @@ import { createContext } from 'react'
 
 const PeriodContext = createContext({
     period: 'weekly',
-    togglePeriod: () => {}
+    changePeriod: () => {}
 })
 
 export const usePeriod = () => {
-    const { period, togglePeriod } = useContext(PeriodContext)
-
-    return { period, togglePeriod }
+    return useContext(PeriodContext)
 }
 
 export function PeriodContextProvider({ children }) {
     const [period, setPeriod] = useState('weekly')
 
-    const togglePeriod = (period) => {
+    const changePeriod = (period) => {
         setPeriod(period)
     }
 
     return (
-        <PeriodContext.Provider value={{ period, togglePeriod }}>
+        <PeriodContext.Provider value={{ period, changePeriod }}>
             {children}
         </PeriodContext.Provider>
     )

@@ -2,7 +2,7 @@ import { usePeriod } from '../hooks/usePeriod.jsx'
 
 function TimeFrameSelector() {
     const timeFrame = ['daily', 'weekly', 'monthly']
-    const { period, togglePeriod } = usePeriod()
+    const { period, changePeriod } = usePeriod()
 
     return (
         <ul className="selector">
@@ -10,7 +10,7 @@ function TimeFrameSelector() {
                 <li
                     key={index}
                     className={`${p === period ? 'active' : null}`}
-                    onClick={() => togglePeriod(p)}
+                    onClick={() => changePeriod(p)}
                 >
                     {p}
                 </li>
