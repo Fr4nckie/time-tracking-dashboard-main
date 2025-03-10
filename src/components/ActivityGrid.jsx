@@ -4,7 +4,7 @@ import ActivityCard from './ActivityCard.jsx'
 function ActivityGrid() {
     return (
         <div className="activity-grid">
-            {data.map((activity, index) => (
+            {data && data.map((activity, index) => (
                 <ActivityCard key={index} activity={activity} />
             ))}
         </div>
