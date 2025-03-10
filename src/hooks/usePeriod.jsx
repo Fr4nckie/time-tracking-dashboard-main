@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useContext, useState } from 'react'
+import { useCallback, useContext, useState } from 'react'
 import { createContext } from 'react'
 
 const PeriodContext = createContext({
@@ -14,9 +14,9 @@ export const usePeriod = () => {
 export function PeriodContextProvider({ children }) {
     const [period, setPeriod] = useState('weekly')
 
-    const changePeriod = (period) => {
-        setPeriod(period)
-    }
+    const changePeriod = useCallback((newPeriod) => {
+        setPeriod(newPeriod)
+    },[])
 
     return (
         <PeriodContext.Provider value={{ period, changePeriod }}>
