@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<UserPanel /> > Should render correctly 1`] = `
+<div
+  class="user-panel"
+>
+  <div
+    class="profile"
+  >
+    <img
+      alt="profile pic"
+      class="profile__avatar"
+      src="/src/assets/image-jeremy.png"
+    />
+    <div
+      class="profile__name"
+    >
+      <p>
+        Report for
+      </p>
+      <h1>
+        Jeremy Robson
+      </h1>
+    </div>
+  </div>
+  <ul
+    class="selector"
+  >
+    <li
+      class="null"
+      role="button"
+    >
+      daily
+    </li>
+    <li
+      class="active"
+      role="button"
+    >
+      weekly
+    </li>
+    <li
+      class="null"
+      role="button"
+    >
+      monthly
+    </li>
+  </ul>
+</div>
+`;
