@@ -1,3 +1,4 @@
+import '../styles/user-profile.scss'
 import avatar from '../assets/image-jeremy.png'
 export default function UserProfile() {
     return (
