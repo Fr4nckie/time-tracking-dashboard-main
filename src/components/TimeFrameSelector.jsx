@@ -1,3 +1,4 @@
+import '../styles/time-frame-selector.scss'
 import { usePeriod } from '../hooks/usePeriod.jsx'
 
 function TimeFrameSelector() {
@@ -8,6 +9,7 @@ function TimeFrameSelector() {
         <ul className="selector">
             {timeFrame.map((p, index) => (
                 <li
+                    role="button"
                     key={index}
                     className={`${p === period ? 'active' : null}`}
                     onClick={() => changePeriod(p)}
